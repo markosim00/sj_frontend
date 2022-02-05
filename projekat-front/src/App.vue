@@ -7,7 +7,7 @@
 
 <script>
 import Header from './components/Header.vue'
-import Utakmica from './components/Utakmica.vue'
+import Utakmica from './views/Utakmica.vue'
 
 export default {
   name: 'App',
