@@ -18,8 +18,14 @@
               </b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
-
         </b-collapse>
+
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item v-if="!token" to="/register">Register</b-nav-item>
+            <b-nav-item v-if="!token" to="/login">Log In</b-nav-item>
+            <b-nav-item v-else>Logout</b-nav-item>
+          </b-navbar-nav>
+
       </b-navbar>
     </div>
 </template>
@@ -31,7 +37,8 @@
 
     data (){
       return {
-        takmicenja: null
+        takmicenja: null,
+        token: null
       }
     },
     

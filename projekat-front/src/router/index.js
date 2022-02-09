@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import UtakmicaSingle from '@/views/UtakmicaSingle.vue'
 import Takmicenje from '@/views/Takmicenje.vue'
 import Home from '@/views/Home.vue'
+import Login from '@/views/Login.vue'
+import Register from '@/views/Register.vue'
 
 Vue.use(VueRouter);
 
@@ -21,6 +23,16 @@ const routes = [
       path: '/takmicenje/:id',
       name: 'Takmicenje',
       component: Takmicenje
+  },
+  {
+      path: '/login',
+      name: 'Login',
+      component: Login
+  },
+  {
+      path: '/register',
+      name: 'Register',
+      component: Register
   }
 ];
 
