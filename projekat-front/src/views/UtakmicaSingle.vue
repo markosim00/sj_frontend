@@ -15,8 +15,18 @@
   export default {
     name: 'UtakmicaSingle',
     
-    props: {
-      utakmica: Object
+    data(){
+      return {
+        utakmica: null
+      }
+    },
+
+    mounted() {
+      fetch(`http://localhost:8000/admin/utakmicas/${this.$route.params.id}`)
+        .then( obj => obj.json() )
+        .then( res => {
+          this.utakmica = res;
+        });
     }
   }
 

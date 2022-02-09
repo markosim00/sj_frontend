@@ -2,6 +2,7 @@
   <div id="app">
     <Header :title="title"/>
     <Utakmica v-for="utakmica in utakmice" :key="utakmica.id" :utakmica="utakmica"/>
+    <router-view />
   </div>
 </template>
 

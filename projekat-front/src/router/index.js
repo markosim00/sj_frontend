@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import UtakmicaSingle from './views/UtakmicaSingle.vue'
-import Takmicenje from './views/Takmicenje.vue'
+import UtakmicaSingle from '@/views/UtakmicaSingle.vue'
+import Takmicenje from '@/views/Takmicenje.vue'
 
 Vue.use(VueRouter);
 
