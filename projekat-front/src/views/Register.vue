@@ -56,8 +56,9 @@
             .then( res => res.json() )
             .then( el => {
                 this.token = el.token;
-                this.$router.push({ name: 'Home' });
             });
+       
+        this.$router.push({ name: 'Home' });
       }
     }
   }

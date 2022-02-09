@@ -7,13 +7,20 @@
       <b-card-text>{{ utakmica.datum }}</b-card-text>
       <b-card-text>{{ utakmica.vreme }}</b-card-text>
     </b-card>
+    <Comments/>
   </div>
 </template>
 
 <script>
 
+  import Comments from '@/components/Comments.vue'
+
   export default {
     name: 'UtakmicaSingle',
+
+    components: {
+      Comments
+    },
     
     data(){
       return {

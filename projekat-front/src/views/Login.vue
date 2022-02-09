@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    
     <b-form v-if="!token" @submit="onSubmit">
       <b-form-group label="User Name:" label-for="name">
         <b-form-input id="name" v-model="form.name" placeholder="Enter name" required></b-form-input>
@@ -12,6 +12,7 @@
 
       <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
+    <Comments :token="token"/>
   </div>
 </template>
 
@@ -33,8 +34,11 @@
 
     methods: {
 
+
       onSubmit(e) {
         e.preventDefault();
+
+        
 
         fetch('http://localhost:9000/login', {
             method: 'POST',
@@ -46,9 +50,9 @@
                     alert(tkn.msg);
                 } else {
                     this.token = tkn.token;
-                    this.$router.push({ name: 'Home' });
                 }
             });
+        this.$router.push({ name: 'Home' });
       }
     }
   }
