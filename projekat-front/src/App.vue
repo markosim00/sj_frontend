@@ -26,12 +26,15 @@ export default {
 
   mounted() {
     
-    fetch('http://localhost:8000/admin/utakmicas')
-        .then( obj => obj.json() )
-        .then(res => {
-          console.log(res);
-          this.utakmice = res;
-        });
+
+
+     /* fetch('http://localhost:8000/admin/utakmicas')
+          .then( obj => obj.json() )
+          .then(res => {
+            console.log(res);
+            this.utakmice = res;
+          });*/
+
 
   }
 

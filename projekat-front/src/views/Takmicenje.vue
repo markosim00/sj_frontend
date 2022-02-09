@@ -1,18 +1,15 @@
 <template>
-  <div id="app">
-    <Header/>
+  <div>
     <Utakmica v-for="utakmica in utakmice" :key="utakmica.id" :utakmica="utakmica"/>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 import Utakmica from '@/views/Utakmica.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
     Utakmica
   },
 
@@ -24,10 +21,13 @@ export default {
   },
 
   mounted() {
+
+    console.log(this.$route.params);
     
     fetch(`http://localhost:8000/admin/utakmicas?takmicenjeId=${this.$route.params.id}`)
             .then( obj => obj.json() )
             .then( res => {
+              console.log(res);
               this.utakmice = res; 
             });
 
